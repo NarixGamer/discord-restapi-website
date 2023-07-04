@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drip Narix Discord Profile</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/popup.css">
+    <script src="js/index.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+    <link rel="website icon" type="png" href="img/icon.png">
+</head>
+<body>
+    <div id="app">
+        <div class="profile">
+                <div id="container">
+                    <div class="test">
+                        <img :src="banner" class="banner" border-radius="90" alt="Avatar">
+                        <a href="https://discord.com/users/530356512615563264" target="_blank">
+                        <img :src="avatarUrl" class="avatar" width="100" height="100" :style="{borderColor:avatar_color}" alt="Avatar">
+                        </a>
+                    </div>
+                <div id="avatar">
+                    <a href="https://discord.com/users/530356512615563264" class="username" title="Drip Narix" target="_blank">
+                    <p>{{globalname}}</p>
+		            <p class="usernamefont">{{username}}</p>
+                    </a>
+                    <div class="badges">
+                        <div class="image-with-popup">
+                            <img src="img/hypesquad.svg">
+                            <span class="popup-text">HypeSquad Balance</span>
+                        </div>
+
+                        <div class="image-with-popup">
+                            <img src="img/developer.svg">
+                            <span class="popup-text">Active Developer</span>
+                        </div>
+
+                        <div class="image-with-popup">
+                            <img src="img/nitro.svg">
+                            <span class="popup-text">Subscriber since Dec. 6, 2021</span>
+                        </div>
+
+                        <div class="image-with-popup">
+                            <img src="img/boost.png" class="boost">
+                            <span class="popup-text">Server boosting since Dec. 6, 2021</span>
+                        </div>
+                    </div>
+                </div>
+                <div id="container" class="infos">
+                    <p class="aktivitaet_ueberschrift"> <br> Presence:</p>
+                    <p class="status"> {{ status }} <br> <br></p>
+                </div>
+                <div id="container" class="infos" v-if="datenzeigen3">
+                    <p class="status_infos"><br>{{speichern_status1}} </p>{{speichern_status2}} <br> <br>
+                </div>
+                <br>
+                <center>
+                <button class="aktivitaet_button" @click="showInfo">{{button_text}}</button>
+            </center>
+    </div>
+    </div>
+    <Transition name="bounce">
+    <div v-if="showInfoContainer" class="info_aktivitaet"  v-bind:class="{ 'show-info': showInfoContainer }">
+    <div id="container_lol" class="infos3">
+
+        <p class="aktivitaet_ueberschrift"> Activity:</p>
+
+        <div class="aktivitaet">
+            <div v-if="nix && nix2" class="ruhig">
+                <p>Currently not doing anything... <br> <br></p>
+            </div>
+            <div class="spotify_alles">
+            <p class="spotify_schrift" v-if="datenzeigen">{{ spotify_status }}</p>
+            <div class="spotify_aktivitaet">
+                <div id="infos1" v-if="datenzeigen">
+                    <a :href="spotify_link" target="_blank">
+                    <img :src="spotify_album" width="150" height="150" class="album_bild" alt="spotifybild">
+                    </a>
+                </div>
+                <div id="infos2" v-if="datenzeigen" href="{{spotify_link}}">
+                    <a :href="spotify_link" style="color: white; text-decoration: none;" target="_blank">
+                        <p style="font-weight: bold;">{{speichern1}}</p>by {{speichern2}}
+                        <br>
+                        <progress id="spotify-progress" :value="millis_int" :max="ende_zeit"></progress>
+                        <div class="spotify_dauer">
+                            <div>
+                                {{spotify_current_time_number}}
+                            </div>
+                            <div>
+                                {{ende_zeit_min_sek}}
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+            <div v-if="datenzeigen"><br></div>
+            <p class="spielt_schrift" v-if="datenzeigen2"> Is playing: </p>
+
+            <div id="spiel_aktivitaet">
+                <div class="spiel_bild">
+                    <img :src="spiel_url" class="bildma" v-if="spielma" alt="">
+                    <img :src="spiel_url_ohne_assets" class="bildoa" v-if="spieloa" alt="">
+                    <img :src="spiel_url_premid" class="bildpr" v-if="spielpr" alt="">
+                    <img :src="spiel_url_kein_bild" class="keinbild" v-if="spielkb" alt="">
+                </div>
+                <div class="spiel_infos" v-if="datenzeigen2">
+                    <p style="font-weight: bold;">{{speichern_spiel1}} </p>{{speichern_spiel2}} <br> {{speichern_spiel3}}
+                </div>
+                <div v-if="datenzeigen2">
+                    <br>
+                </div>
+            </div>
+            
+            <div class="platz">                    
+                <br>
+                <br>
+                <br>
+            </div>
+
+    </div>
+</div>
+</div>
+
+</Transition>
+</div>
+<script src="js/vue.js"></script>
+  <div class="unten">
+    <div>
+    <p>
+      <a href="https://narix.dev" style="text-decoration: none; color:white" >Narix</a> © 2023. All rights reserved.
+    </p>
+    </div>
+  </div>
+</body>
+</html>

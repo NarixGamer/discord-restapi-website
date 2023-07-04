@@ -1,0 +1,27 @@
+.image-with-popup {
+    position: relative;
+    display: inline-block;
+  }
+
+  .popup-text {
+    visibility: hidden;
+    opacity: 0;
+    background-color: #141321;
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 150px;
+    transition: opacity 0.3s, transform 0.3s;
+  }
+
+  .image-with-popup:hover .popup-text {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(-50%) translateY(-10px);
+  }
