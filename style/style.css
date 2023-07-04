@@ -10,7 +10,7 @@ body{
     height: 90vh;
 }
 .profile{
-        width: 25%;
+        width: 25% auto;
         background-color: #141321;
         color: white;
         border-radius: 10px;
@@ -244,16 +244,7 @@ body{
 .platz{
     display: none;
 }
-@media only screen and (max-width: 1900px) {
-  .username{
-      text-decoration: none;
-      color: white;
-      margin-left: 30%;
-  }
-  .profile{
-    width: auto;
-  }
-}
+
 @media only screen and (max-width: 1080px) {
     body{
         background: url("../img/backgroundphone.jpg");
