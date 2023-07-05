@@ -1,44 +1,48 @@
 #shape {
-    width: 100px;
-    height: 100px;
-    background-color: rgb(173, 215, 230);
-    background-image: url('../img/feedback.png');
-    background-size: cover;
-    position: fixed;
-    bottom: 50px;
-    right: 10px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-  }
+  width: 100px;
+  height: 100px;
+  background-color: rgb(173, 215, 230);
+  background-image: url('../img/feedback.png');
+  background-size: cover;
+  position: fixed;
+  bottom: 50px;
+  right: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
 
-  #shape.clicked {
-    background-image: none;
-    width: 350px;
-    height: 120px;
-    background-color: rgba(173, 215, 230, 0.8);
-    color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  #shape.clicked span {
-    display: block;
-    color: black;
-    font-size: 18px;
-    text-align: center;
-  }
-.link{
+#shape.clicked {
+  background-image: none;
+  width: 400px;
+  height: 120px;
+  background-color: rgba(173, 215, 230, 0.8);
   color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shape.clicked span {
+  display: block;
+  color: black;
+  font-size: 18px;
+  text-align: center;
+}
+.link{
+color: black;
 }
 @media only screen and (max-width: 768px) {
-  #shape {
-    width: 75px;
-    height: 75px;
-    right: 30px;
-  } 
+#shape {
+  width: 75px;
+  height: 75px;
+  right: 30px;
+} 
+#shape.clicked{
+  width: 250px;
+  height: 110px;
+}
 }
