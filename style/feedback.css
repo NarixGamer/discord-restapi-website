@@ -1,7 +1,7 @@
 #shape {
     width: 100px;
     height: 100px;
-    background-color: blanchedalmond;
+    background-color: rgb(173, 215, 230);
     background-image: url('../img/feedback.png');
     background-size: cover;
     position: fixed;
@@ -19,8 +19,8 @@
     background-image: none;
     width: 350px;
     height: 120px;
-    background-color: #141321;
-    color: #fff;
+    background-color: rgba(173, 215, 230, 0.8);
+    color: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -28,7 +28,17 @@
 
   #shape.clicked span {
     display: block;
-    color: white;
+    color: black;
     font-size: 18px;
     text-align: center;
   }
+.link{
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+  #shape {
+    width: 75px;
+    height: 75px;
+    right: 30px;
+  } 
+}

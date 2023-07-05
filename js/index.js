@@ -27,19 +27,20 @@ window.addEventListener('DOMContentLoaded', (event) => {
         });
 
         function changeShape(event) {
-            const shape = document.getElementById("shape");
-            const content = document.getElementById("content");
-            
-            if (event.target === shape) {
-              if (shape.classList.contains("clicked")) {
-                shape.classList.remove("clicked");
-                content.textContent = "";
-              } else {
-                shape.classList.add("clicked");
-                content.textContent = "Do you like my Website? Are there any improvements that need to be done? I would be happy to get feedback from you on Discord!";
-              }
+          const shape = document.getElementById("shape");
+          const content = document.getElementById("content");
+        
+          if (event.target === shape) {
+            if (shape.classList.contains("clicked")) {
+              shape.classList.remove("clicked");
+              content.textContent = "";
+            } else {
+              shape.classList.add("clicked");
+              content.innerHTML = 'Do you like my Website? Are there any improvements that need to be done? I would be happy to get feedback from you on <a class="link" href="https://drip.narix.dev/friend-request.html">Discord!</a>';
             }
           }
+        }
+        
       
           document.addEventListener("click", function(event) {
             const shape = document.getElementById("shape");

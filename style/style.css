@@ -1,312 +1,48 @@
-body{
-    background: url("../img/background2.jpg");
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    min-height: 95vh;
-}
-#app{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 90vh;
-}
-.profile{
-        width: 25% auto;
-        background-color: #141321;
-        color: white;
-        border-radius: 10px;
-        padding: 10px;
-        display: flex;
-        box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px 10px;
-}
-.bounce-enter-active {
-    animation: bounce-in 0.5s;
-  }
-  .bounce-leave-active {
-    animation: bounce-in 0.5s reverse;
-  }
-  @keyframes bounce-in {
-    0% {
-      transform: scale(0);
-    }
-    50% {
-      transform: scale(1.25);
-    }
-    100% {
-      transform: scale(1);
-    }
-  }
-
-.info_aktivitaet{
-    background-color: #141321;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 10px 10px;
-    width: 25%;
-    margin-left: 5%;
-}
-
-@keyframes gradient {
-    from {
-      background-position: 0 0;
-    }
-    to {
-      background-position: 200% 0;
-    }
-}
-
-.infos{
-    margin: auto;
-    text-align: center;
-    box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 1.5px 1.5px;
-    border-radius: 10px;
-}
-.infos3{
-    margin: auto;
-    text-align: center;
-    border-radius: 10px;
-}
-
-.username {
-    font-size: 24px;
-    font-weight: bold;
-    margin-left: 30%;
-}
-
-.status {
-    font-size: 18px;
-}
-.spotify_aktivitaet {
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.spotify_dauer{
-    display: flex;
-    justify-content: space-between;
-} 
-#spotify-progress {
-    width: 85%;
-    height: 5px;
-    margin-top: 10px;
-    background-color: #eee;
-    border-radius: 5px;
-}
-#spotify-progress::-webkit-progress-bar {
-    background-color: #eee;
-    border-radius: 5px;
-  }
-  
-#spotify-progress::-webkit-progress-value,
-#spotify-progress::-moz-progress-bar {
-    background-color: green;
-    border-radius: 5px;
-}
-#infos2{
-    width: 60%;
-    margin-left: 2%;
-}
-.album_bild{
-    border-radius: 5%;
-}
-.aktivitaet_ueberschrift{
-    font-size: 20px;
-    font-weight: bold;
-}
-.avatar{
-    position: absolute;
-    top: 85%;
-    left: 10%;
-    border-radius: 10%;
-    border: 4px solid;
-}
-#avatar{
-    display: flex;
-    margin-top: -10px;
-    margin-left: 10%;
-}
-.avatar {
-    transition: transform 0.3s ease, opacity 0.3s ease;
-}
-#container .banner{
-    width: 480px;
-    height: 200px;
-    border-radius: 10px;
-    transition: transform 0.3s ease, opacity 0.3s ease, width 0.3s ease;
-}
-
-.badges{
-    margin-left: 2%;
-    margin-top: 6%;
-}
-.boost{
-    height: 25px;
-    width: 25px;
-}
-.username{
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    color: white;
-}
-.usernamefont{
-    margin-top: -10px;
-    font-size: 18px;
-}
-.test{
-    position: relative;
-}
-
-#spiel_aktivitaet{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.spiel_infos{
-    font-size: 16px;
-    width: 50%;
-    margin-left: 10%;
-}
-.spielt_schrift{
-    font-size: 16px;
-    font-weight: bold;
-}
-.spotify_schrift{
-    font-size: 16px;
-    font-weight: bold;
-    color: green;
-}
-.status_infos{
-    font-size: 20px;
-    font-weight: bold;
-}
-.bildoa{
-    height: 150px;
-    width: 150px;
-    border-radius: 5%;
-}
-.bildma{
-    height: 150px;
-    width: 150px;
-    border-radius: 5%;
-}
-.bildpr{
-    height: 150px;
-    width: 150px;
-    border-radius: 5%;
-}
-.keinbild{
-    height: 150px;
-    width: 150px;
-    border-radius: 5%;
-}
-
-#container_lol{
-    width: 100%;
-    background-color: #141321;
-    color: white;
-}
-
-.aktivitaet_button{
-  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
-  border-radius: 8px;
-  border-style: none;
-  box-sizing: border-box;
-  color: #FFFFFF;
-  cursor: pointer;
-  flex-shrink: 0;
-  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  height: 4rem;
-  padding: 0 1.6rem;
-  text-align: center;
-  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
-  transition: all .5s;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-.unten{
+#shape {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(173, 215, 230);
+    background-image: url('../img/feedback.png');
+    background-size: cover;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 40px; /* �ndern Sie die H�he je nach Bedarf */
-    background-color: #151C38; /* �ndern Sie die Hintergrundfarbe je nach Bedarf */
-    color: #fff; /* �ndern Sie die Textfarbe je nach Bedarf */
+    bottom: 50px;
+    right: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.platz{
-    display: none;
-}
+    border-radius: 10px;
+  }
 
-@media only screen and (max-width: 1080px) {
-    body{
-        background: url("../img/backgroundphone.jpg");
-        background-position: center;
-        background-repeat: repeat-y;
-        background-size: cover;
-    }
-    .profile{
-        width: auto;
-        justify-content: center;
-    }
-    .info_aktivitaet{
-        width: auto;
-        margin-top: 10px;
-        margin-left: 0;
-    }
-    #container_lol{
-        width: 100%;
-    }
-    #app{
-        display: block;
-    }
-    .album_bild{
-        width: 100px;
-        height: 100px;
-    }
-    .spotify_aktivitaet{
-        font-size: 13px;
-        width: 100%;
-    }
-    #container .banner{
-        width: 350px;
-        height: 200px;
-    }
-    #avatar{
-        margin-left: 15%;
-        margin-top: -5%;
-    }
-    .username{
-        text-decoration: none;
-        color: white;
-        font-size: 18px;
-        margin-left: 25%;
-        margin-top: 1%;
-    }
-    .avatar{
-        height: 75px;
-        width: 75px;
-    }
-    .bildoa{
-        height: 75px;
-        width: 75px;
-    }
-    .bildma{
-        height: 75px;
-        width: 75px;
-    }
-    .badges{
-        content: "\a";
-    }
-    .platz{
-        display:contents;
-    }
-}
+  #shape.clicked {
+    background-image: none;
+    width: 400px;
+    height: 120px;
+    background-color: rgba(173, 215, 230, 0.8);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
+  #shape.clicked span {
+    display: block;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+  }
+.link{
+  color: black;
+}
+@media only screen and (max-width: 768px) {
+  #shape {
+    width: 75px;
+    height: 75px;
+    right: 30px;
+  } 
+  #shape.clicked{
+    width: 250px;
+    height: 110px;
+  }
+}
