@@ -17,12 +17,12 @@
                 <div id="container">
                     <div class="test">
                         <img :src="banner" class="banner" border-radius="90" alt="Avatar">
-                        <a href="https://discord.com/users/530356512615563264" target="_blank">
+                        <a href="https://discord.com/users/530356512615563264" target="_blank" class="pointer">
                         <img :src="avatarUrl" class="avatar" width="100" height="100" :style="{borderColor:avatar_color}" alt="Avatar">
                         </a>
                     </div>
                 <div id="avatar">
-                    <a href="https://discord.com/users/530356512615563264" class="username" title="Drip Narix" target="_blank">
+                    <a href="https://discord.com/users/530356512615563264" class="username pointer" title="Drip Narix" target="_blank">
                     <p>{{globalname}}</p>
 		            <p class="usernamefont">{{username}}</p>
                     </a>
@@ -33,15 +33,10 @@
                         </div>
 
                         <div class="image-with-popup">
-                            <img src="img/developer.svg">
-                            <span class="popup-text">Active Developer</span>
-                        </div>
-
-                        <div class="image-with-popup">
                             <img src="img/nitro.svg">
                             <span class="popup-text">Subscriber since Dec. 6, 2021</span>
                         </div>
-
+                    
                         <div class="image-with-popup">
                             <img src="img/boost.png" class="boost">
                             <span class="popup-text">Server boosting since Dec. 6, 2021</span>
@@ -53,7 +48,21 @@
                     <p class="status"> {{ status }} <br> <br></p>
                 </div>
                 <div id="container" class="infos" v-if="datenzeigen3">
-                    <p class="status_infos"><br>{{speichern_status1}} </p>{{speichern_status2}} <br> <br>
+                    <p class="status_infos"><br>
+                        {{speichern_status1}} </p>
+                        <div class="status_con">
+                                <div v-if="emojizeigen" style="display: flex; justify-content: center;">
+                                    <strong>Emoji:</strong>&nbsp; 
+                                    <img :src="emoji" alt="emoji" class="emoji">
+                                </div>
+                                <div v-if="abstand_status">
+                                    <br>
+                                </div>
+                                <div v-if="statustextzeigen">
+                                    <strong>Statustext:</strong>&nbsp;{{speichern_status2}}</div>
+                                <br>
+                        </div>
+                        
                 </div>
                 <br>
                 <center>
@@ -75,12 +84,12 @@
             <p class="spotify_schrift" v-if="datenzeigen">{{ spotify_status }}</p>
             <div class="spotify_aktivitaet">
                 <div id="infos1" v-if="datenzeigen">
-                    <a :href="spotify_link" target="_blank">
+                    <a :href="spotify_link" target="_blank" class="pointer">
                     <img :src="spotify_album" width="150" height="150" class="album_bild" alt="spotifybild">
                     </a>
                 </div>
                 <div id="infos2" v-if="datenzeigen" href="{{spotify_link}}">
-                    <a :href="spotify_link" style="color: white; text-decoration: none;" target="_blank">
+                    <a :href="spotify_link" style="color: white; text-decoration: none;" target="_blank" class="pointer">
                         <p style="font-weight: bold;">{{speichern1}}</p>by {{speichern2}}
                         <br>
                         <progress id="spotify-progress" :value="millis_int" :max="ende_zeit"></progress>
@@ -126,14 +135,14 @@
 
 </Transition>
 </div>
-<div id="shape" onclick="changeShape(event)">
+<div id="shape" class="pointer" onclick="changeShape(event)">
     <span id="content"></span>
   </div>
 <script src="js/vue.js"></script>
   <div class="unten">
     <div>
     <p>
-      <a href="https://narix.dev" style="text-decoration: none; color:white" >Narix</a> © 2023. All rights reserved.
+      <a href="https://narix.dev" style="text-decoration: none; color:white" class="pointer">Narix</a> © 2023. All rights reserved.
     </p>
     </div>
   </div>

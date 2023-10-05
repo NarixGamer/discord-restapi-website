@@ -25,7 +25,11 @@ new Vue({
         millis_int: '',
         datenzeigen: '',
         datenzeigen3: '',
+        emojizeigen: '',
+        statustextzeigen: '',
         aktivitaet:'',
+        emoji: '',
+        abstand_status: '',
         speichern1: '',
         speichern2: '',
         speichern_status1: '',
@@ -69,7 +73,7 @@ new Vue({
                     this.aktivitaet = "";
                     this.avatarUrl = "https://api.lanyard.rest/530356512615563264.png";
                     this.username = data.data.discord_user.username;
-		    this.globalname = data.data.discord_user.global_name;
+		            this.globalname = data.data.discord_user.global_name;
                     this.status = data.data.discord_status;
                     if (data.data.discord_status === "dnd"){
                         this.status = "Do not disturb! 🔴";
@@ -152,15 +156,48 @@ new Vue({
                         this.spotify_current_time=Math.round(zeit);
                     }
                     if(data.data.activities.hasOwnProperty([0]) && data.data.activities[0].type == 4){
-                        if(data.data.activities[0].name === "Custom Status")
-                        this.speichern_status1 = "Own status:";
-                        this.speichern_status2 = data.data.activities[0].state;
-                        this.datenzeigen3 = true;
+                        if(data.data.activities[0].name === "Custom Status"){
+                            if(data.data.activities[0].hasOwnProperty("state")){
+                                this.speichern_status1 = "Own status:";
+                                this.speichern_status2 = data.data.activities[0].state;
+                                this.datenzeigen3 = true;
+                                this.statustextzeigen = true;
+                            }
+                            else{
+                                this.statustextzeigen = false;
+                            }
+                            if(data.data.activities[0].hasOwnProperty("emoji")){
+                                this.speichern_status1 = "Own status:";
+                                this.datenzeigen3 = true;
+                                let id = data.data.activities[0].emoji.id;
+                                if(data.data.activities[0].emoji.animated === true){
+                                    this.emoji = "https://cdn.discordapp.com/emojis/" + id +".gif?size=96&quality=lossless";
+                                    this.emojizeigen = true;
+                                }
+                                else if(data.data.activities[0].emoji.animated === false){
+                                    this.emoji = "https://cdn.discordapp.com/emojis/" + id +".webp?size=96&quality=lossless";
+                                    this.emojizeigen = true;
+                                }
+                                
+                            }
+                            else{
+                                this.emojizeigen = false;
+                            }
+                            if(this.statustextzeigen == true && this.emojizeigen == true){
+                                this.abstand_status = true;
+                            }
+                            else{
+                                this.abstand_status = false;
+                            }
+                        }
                     }
                     else{
                         this.speichern_status1 = null;
                         this.speichern_status2 = null;
-                        this.datenzeigen2 = false;
+                        this.datenzeigen3 = false;
+                        this.statustextzeigen = false;
+                        this.emojizeigen = false;
+                        this.abstand_status = false;
                     }
                     if(data.data.activities.hasOwnProperty([0]) && data.data.activities[0].type == 0){
                         this.speichern_spiel1 = data.data.activities[0].name;

@@ -1,3 +1,6 @@
+html{
+    cursor: url("../img/default.png"), default;
+}
 body{
     background: url("../img/background2.jpg");
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -102,6 +105,9 @@ body{
 #spotify-progress::-moz-progress-bar {
     background-color: green;
     border-radius: 5px;
+}
+.pointer{
+	cursor: url("../img/pointer.png"), pointer;
 }
 #infos2{
     width: 60%;
@@ -227,6 +233,7 @@ body{
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  cursor: url("../img/pointer.png"), pointer;
 }
 .unten{
     position: fixed;
@@ -245,6 +252,10 @@ body{
     display: none;
 }
 
+.status_con{
+    justify-content: center;
+    align-items: center;
+}
 @media only screen and (max-width: 768px) {
     body{
         background: url("../img/backgroundphone.jpg");

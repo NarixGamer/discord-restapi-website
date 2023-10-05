@@ -36,7 +36,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
               content.textContent = "";
             } else {
               shape.classList.add("clicked");
-              content.innerHTML = 'Do you like my Website? Are there any improvements that need to be done? I would be happy to get feedback from you on <a class="link" href="https://drip.narix.dev/friend-request.html">Discord!</a>';
+              content.innerHTML = 'Do you like my Website? Are there any improvements that need to be done? I would be happy to get feedback from you on <a class="link" href="https://drip.narix.dev/friend-request.html">Discord!</a> <br> <br> <a class="link" href="https://github.com/NarixGamer/discord-restapi-website/">Source Code</a>';
             }
           }
         }
